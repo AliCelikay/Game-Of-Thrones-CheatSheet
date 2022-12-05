@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Thrones Cheat Sheet!</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2 uk-background-height-1-1		">
+      <h1>
+        <span role="img" aria-label="money">⚔️</span>
+        <a href="/">Cheat Sheet!</a>
+      </h1>
+      <nav class="uk-navbar" uk-nav>
+        <div class="uk-navbar-left">
+          <ul class="uk-navbar-nav ">
+            <li class="uk-active"><a href="/">King's Landing Page</a></li>
+            <li class="uk-active"><a href="/search">Search Page</a></li>
+            <li class="uk-active"><a href="/saved">Saved Features</a></li>
+            <li class="uk-active">
+              {{#if logged_in}}
+              <a id="logout">logout</a>
+              {{else}}
+              <a href="/login">Sign Up/Log In</a>
+              {{/if}}
+            </li>
+          </ul>
+          </ul>
+        </div>
+      </nav>
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+  <!-- Render scripts -->
+  <script src="/public/js/login.js"></script>
+  <script src="/js/logout.js"></script>
+  <script src="/public/js/search.js"></script>
+  <script src="/public/js/cod.js"></script>
+  <script src="/public/js/saveCharacters.js"></script>
+  {{!-- UIKIT --}}
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+
+</body>
+
+</html>
